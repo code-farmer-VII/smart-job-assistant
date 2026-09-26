@@ -11,7 +11,7 @@ finally:
 # Add the mcp directory to path so relative imports work correctly when running directly
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from server.tools import profile, skills, experience, projects, jobs, applications
+from server.tools import profile, skills, experience, projects, jobs, applications, analysis
 
 # Initialize FastMCP Server
 # FastMCP uses Python type hints to generate the JSON schema for tools automatically.
@@ -41,6 +41,9 @@ mcp.tool()(jobs.add_job)
 # Register Applications Tools
 mcp.tool()(applications.get_applications)
 mcp.tool()(applications.update_application_status)
+
+# Register Analysis Tool
+mcp.tool()(analysis.get_job_analysis_context)
 
 if __name__ == "__main__":
     # Run using stdin/stdout streams
