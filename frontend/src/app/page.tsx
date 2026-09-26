@@ -1,69 +1,38 @@
-import Image from "next/image";
+import AgentChat from "@/components/AgentChat";
 
-export default function Home() {
+export default function Dashboard() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+      <header>
+        <h1 className="text-4xl font-bold mb-2">Welcome Back</h1>
+        <p className="text-slate-400">Here's an overview of your job application pipeline.</p>
+      </header>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <StatCard title="Saved Jobs" value="12" trend="+2 this week" color="from-blue-500/20 to-blue-600/5" border="border-blue-500/20" />
+        <StatCard title="Active Applications" value="5" trend="1 Interview scheduled" color="from-purple-500/20 to-purple-600/5" border="border-purple-500/20" />
+        <StatCard title="Total Skills" value="28" trend="Top 10% in React" color="from-emerald-500/20 to-emerald-600/5" border="border-emerald-500/20" />
+      </div>
+
+      <div className="glass-panel p-8 rounded-2xl relative overflow-hidden group">
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl group-hover:bg-indigo-500/20 transition-all duration-500 pointer-events-none"></div>
+        <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+          <span className="text-purple-400">✦</span> Ask Assistant
+        </h2>
+        <AgentChat />
+      </div>
+    </div>
+  );
+}
+
+function StatCard({ title, value, trend, color, border }: any) {
+  return (
+    <div className={`glass-panel p-6 rounded-2xl border ${border} bg-gradient-to-br ${color} hover:scale-[1.02] transition-transform duration-300 cursor-default relative overflow-hidden`}>
+      <div className="relative z-10">
+        <h3 className="text-slate-400 font-medium mb-2">{title}</h3>
+        <div className="text-4xl font-bold text-white mb-2">{value}</div>
+        <div className="text-sm text-slate-300/80">{trend}</div>
+      </div>
     </div>
   );
 }
