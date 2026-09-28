@@ -1,7 +1,7 @@
 import json
 import asyncio
 from .client import mcp_client
-from .gemini import get_gemini_model
+from .gemini import get_gemini_client
 
 ANALYSIS_PROMPT = """
 You are an expert tech recruiter and career coach.
@@ -50,11 +50,20 @@ async def analyze_job(job_id: str) -> str:
             
         prompt = ANALYSIS_PROMPT.format(data=data_text)
         
-        # Initialize Gemini model (no tools needed for pure text analysis)
-        model = get_gemini_model(system_instruction="You are a career and technical interview expert.")
+        # Initialize Gemini client
+        client = get_gemini_client()
         
         try:
-            response = model.generate_content(prompt)
+            from google.genai import types
+            config = types.GenerateContentConfig(
+                system_instruction="You are a career and technical interview expert.",
+                temperature=1,
+            )
+            response = client.models.generate_content(
+                model="gemini-3.8-flash",
+                contents=prompt,
+                config=config
+            )
             return response.text
         except Exception as e:
             return f"Failed to generate analysis using Gemini: {e}"

@@ -1,11 +1,185 @@
 [
   {
     "id": "experience-001",
-    "company": "",
-    "position": "",
-    "start_date": "",
-    "end_date": "",
-    "description": "",
-    "technologies": []
+    "company": "Previous Company 1",
+    "position": "Developer Level 1",
+    "start_date": "2011-01",
+    "end_date": "2012-01",
+    "description": "Worked on core infrastructure and product features for high-traffic project 1.",
+    "technologies": [
+      "Python",
+      "Docker"
+    ]
+  },
+  {
+    "id": "experience-002",
+    "company": "Previous Company 2",
+    "position": "Developer Level 2",
+    "start_date": "2012-01",
+    "end_date": "2013-01",
+    "description": "Worked on core infrastructure and product features for high-traffic project 2.",
+    "technologies": [
+      "Python",
+      "Docker",
+      "AWS"
+    ]
+  },
+  {
+    "id": "experience-003",
+    "company": "Previous Company 3",
+    "position": "Developer Level 3",
+    "start_date": "2013-01",
+    "end_date": "2014-01",
+    "description": "Worked on core infrastructure and product features for high-traffic project 3.",
+    "technologies": [
+      "Python",
+      "Docker",
+      "AWS",
+      "FastAPI"
+    ]
+  },
+  {
+    "id": "experience-004",
+    "company": "Previous Company 4",
+    "position": "Developer Level 4",
+    "start_date": "2014-01",
+    "end_date": "2015-01",
+    "description": "Worked on core infrastructure and product features for high-traffic project 4.",
+    "technologies": [
+      "Python"
+    ]
+  },
+  {
+    "id": "experience-005",
+    "company": "Previous Company 5",
+    "position": "Developer Level 5",
+    "start_date": "2015-01",
+    "end_date": "2016-01",
+    "description": "Worked on core infrastructure and product features for high-traffic project 5.",
+    "technologies": [
+      "Python",
+      "Docker"
+    ]
+  },
+  {
+    "id": "experience-006",
+    "company": "Previous Company 6",
+    "position": "Developer Level 6",
+    "start_date": "2016-01",
+    "end_date": "2017-01",
+    "description": "Worked on core infrastructure and product features for high-traffic project 6.",
+    "technologies": [
+      "Python",
+      "Docker",
+      "AWS"
+    ]
+  },
+  {
+    "id": "experience-007",
+    "company": "Previous Company 7",
+    "position": "Developer Level 7",
+    "start_date": "2017-01",
+    "end_date": "2018-01",
+    "description": "Worked on core infrastructure and product features for high-traffic project 7.",
+    "technologies": [
+      "Python",
+      "Docker",
+      "AWS",
+      "FastAPI"
+    ]
+  },
+  {
+    "id": "experience-008",
+    "company": "Previous Company 8",
+    "position": "Developer Level 8",
+    "start_date": "2018-01",
+    "end_date": "2019-01",
+    "description": "Worked on core infrastructure and product features for high-traffic project 8.",
+    "technologies": [
+      "Python"
+    ]
+  },
+  {
+    "id": "experience-009",
+    "company": "Previous Company 9",
+    "position": "Developer Level 9",
+    "start_date": "2019-01",
+    "end_date": "2020-01",
+    "description": "Worked on core infrastructure and product features for high-traffic project 9.",
+    "technologies": [
+      "Python",
+      "Docker"
+    ]
+  },
+  {
+    "id": "experience-010",
+    "company": "Previous Company 10",
+    "position": "Developer Level 10",
+    "start_date": "2020-01",
+    "end_date": "Present",
+    "description": "Worked on core infrastructure and product features for high-traffic project 10.",
+    "technologies": [
+      "Python",
+      "Docker",
+      "AWS"
+    ]
+  },
+  {
+    "id": "experience-140525cc",
+    "company": "TechCorp Solutions",
+    "position": "Software Engineer",
+    "start_date": "2022-01",
+    "end_date": "Present",
+    "description": "Built and maintained a customer-facing SaaS dashboard using React, TypeScript, and Next.js. Designed RESTful APIs with FastAPI serving 50k+ daily requests. Implemented CI/CD pipelines with GitHub Actions and Docker. Mentored 3 junior developers on TypeScript best practices.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "FastAPI",
+      "GitHub Actions",
+      "Docker"
+    ]
+  },
+  {
+    "id": "experience-dbd680f1",
+    "company": "Digital Agency Co",
+    "position": "Junior Developer",
+    "start_date": "2020-03",
+    "end_date": "2021-12",
+    "description": "Developed responsive web applications using React and Tailwind CSS. Built Python automation scripts reducing manual data entry by 60%. Collaborated with design team to implement pixel-perfect UI components.",
+    "technologies": [
+      "React",
+      "Tailwind CSS",
+      "Python"
+    ]
+  },
+  {
+    "id": "experience-4a22dc4d",
+    "company": "TechCorp Solutions",
+    "position": "Software Engineer",
+    "start_date": "2022-01",
+    "end_date": "Present",
+    "description": "Built and maintained a customer-facing SaaS dashboard using React, TypeScript, and Next.js. Designed RESTful APIs with FastAPI serving 50k+ daily requests. Implemented CI/CD pipelines with GitHub Actions and Docker. Mentored 3 junior developers on TypeScript best practices.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "FastAPI",
+      "GitHub Actions",
+      "Docker"
+    ]
+  },
+  {
+    "id": "experience-02b349f1",
+    "company": "Digital Agency Co",
+    "position": "Junior Developer",
+    "start_date": "2020-03",
+    "end_date": "2021-12",
+    "description": "Developed responsive web applications using React and Tailwind CSS. Built Python automation scripts reducing manual data entry by 60%. Collaborated with design team to implement pixel-perfect UI components.",
+    "technologies": [
+      "React",
+      "Tailwind CSS",
+      "Python"
+    ]
   }
 ]

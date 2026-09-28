@@ -1,12 +1,6 @@
 import os
 import sys
-
-# Remove local directory from path temporarily to avoid shadowing the 'mcp' SDK package
-_current_dir = sys.path.pop(0)
-try:
-    from mcp.server.fastmcp import FastMCP
-finally:
-    sys.path.insert(0, _current_dir)
+from fastmcp import FastMCP
 
 # Add the mcp directory to path so relative imports work correctly when running directly
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

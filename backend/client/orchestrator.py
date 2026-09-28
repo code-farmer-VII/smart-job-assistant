@@ -1,21 +1,52 @@
 import json
 import asyncio
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 from typing import List, Dict, Any
-from google.generativeai.types import FunctionDeclaration, Tool
 
 from .client import mcp_client
-from .gemini import get_gemini_model
+from .gemini import get_gemini_client
 from .prompts import SYSTEM_INSTRUCTION
 
-def _mcp_tool_to_gemini(mcp_tool) -> FunctionDeclaration:
+def _clean_schema(schema: dict, is_properties_dict=False) -> dict:
+    if not isinstance(schema, dict):
+        return schema
+        
+    keys_to_remove = {"default", "title", "additionalProperties"}
+    cleaned = {}
+    
+    # Handle Pydantic's anyOf for Optional fields
+    if "anyOf" in schema:
+        # Just grab the first non-null type from anyOf
+        for option in schema["anyOf"]:
+            if isinstance(option, dict) and option.get("type") != "null":
+                cleaned.update(_clean_schema(option))
+                break
+                
+    for k, v in schema.items():
+        if not is_properties_dict and k in keys_to_remove:
+            continue
+        if k == "anyOf":
+            continue
+            
+        if isinstance(v, dict):
+            cleaned[k] = _clean_schema(v, is_properties_dict=(k == "properties"))
+        elif isinstance(v, list):
+            cleaned[k] = [_clean_schema(i) if isinstance(i, dict) else i for i in v]
+        else:
+            cleaned[k] = v
+            
+    return cleaned
+
+def _mcp_tool_to_gemini(mcp_tool) -> types.FunctionDeclaration:
     """
     Converts an MCP tool definition to a Gemini FunctionDeclaration.
     """
-    return FunctionDeclaration(
+    cleaned_schema = _clean_schema(mcp_tool.input_schema)
+    return types.FunctionDeclaration(
         name=mcp_tool.name,
         description=mcp_tool.description,
-        parameters=mcp_tool.inputSchema
+        parameters=cleaned_schema
     )
 
 async def process_user_request(user_input: str) -> str:
@@ -33,28 +64,26 @@ async def process_user_request(user_input: str) -> str:
         
         # 2. Convert to Gemini format
         gemini_functions = [_mcp_tool_to_gemini(t) for t in mcp_tools]
-        gemini_tool = Tool(function_declarations=gemini_functions)
+        gemini_tool = types.Tool(function_declarations=gemini_functions)
         
-        # 3. Initialize Gemini model
-        model = get_gemini_model(tools=[gemini_tool], system_instruction=SYSTEM_INSTRUCTION)
-        chat = model.start_chat()
+        # 3. Initialize Gemini client
+        client = get_gemini_client()
+        config = types.GenerateContentConfig(
+            tools=[gemini_tool],
+            system_instruction=SYSTEM_INSTRUCTION,
+            temperature=0.7
+        )
+        chat = client.chats.create(model="gemini-3.8-flash", config=config)
         
         print(f"[Orchestrator] Sending request to Gemini...")
         # 4. Send message to Gemini
         response = chat.send_message(user_input)
         
         # 5. Handle function calls iteratively
-        # Some complex operations might require multiple tool calls in sequence
-        while response.function_call:
-            fc = response.function_call
+        while response.function_calls:
+            fc = response.function_calls[0]
             tool_name = fc.name
-            
-            # Convert protobuf args to dict safely
-            try:
-                tool_args = type(fc).to_dict(fc).get("args", {})
-            except Exception:
-                # Fallback for simpler args
-                tool_args = dict(fc.args)
+            tool_args = dict(fc.args) if fc.args else {}
                 
             print(f"[Orchestrator] Executing MCP Tool: {tool_name} with args {tool_args}")
             
@@ -62,7 +91,6 @@ async def process_user_request(user_input: str) -> str:
             try:
                 mcp_result = await session.call_tool(tool_name, arguments=tool_args)
                 
-                # Format result for Gemini
                 result_text = "\n".join([
                     c.text for c in mcp_result.content 
                     if getattr(c, 'type', '') == 'text' or hasattr(c, 'text')
@@ -78,14 +106,11 @@ async def process_user_request(user_input: str) -> str:
                 function_response = {"error": str(e)}
                 
             # Send tool result back to Gemini
-            response = chat.send_message(
-                genai.protos.Part(
-                    function_response=genai.protos.FunctionResponse(
-                        name=tool_name,
-                        response=function_response
-                    )
-                )
+            part = types.Part.from_function_response(
+                name=tool_name,
+                response=function_response
             )
+            response = chat.send_message(part)
             
         return response.text
 
@@ -99,6 +124,7 @@ if __name__ == "__main__":
             print("\n--- Final Response ---\n")
             print(result)
         except Exception as e:
-            print(f"Error: {e}")
+            import traceback
+            traceback.print_exc()
     else:
         print("Usage: python orchestrator.py 'Add a new skill: Python'")

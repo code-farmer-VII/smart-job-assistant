@@ -1,0 +1,49 @@
+Temesgen Gonfa
+Full Stack Software Engineer
+Email: temesgen.gonfa@email.com
+Location: Addis Ababa, Ethiopia
+
+SUMMARY
+Passionate full-stack developer with 4+ years of experience building scalable web applications using modern JavaScript/TypeScript frameworks. Strong background in Python backend development, REST APIs, and cloud deployment. Experienced in agile methodologies and cross-functional team collaboration.
+
+SKILLS
+- TypeScript (Advanced)
+- Python (Advanced)
+- React.js (Advanced)
+- Next.js (Intermediate)
+- Node.js (Intermediate)
+- PostgreSQL (Intermediate)
+- Docker (Intermediate)
+- Git (Advanced)
+- FastAPI (Intermediate)
+- Tailwind CSS (Advanced)
+
+EXPERIENCE
+
+Software Engineer | TechCorp Solutions | Jan 2022 - Present
+- Built and maintained a customer-facing SaaS dashboard using React, TypeScript, and Next.js
+- Designed RESTful APIs with FastAPI serving 50k+ daily requests
+- Implemented CI/CD pipelines with GitHub Actions and Docker
+- Mentored 3 junior developers on TypeScript best practices
+
+Junior Developer | Digital Agency Co | Mar 2020 - Dec 2021
+- Developed responsive web applications using React and Tailwind CSS
+- Built Python automation scripts reducing manual data entry by 60%
+- Collaborated with design team to implement pixel-perfect UI components
+
+PROJECTS
+
+Smart Job Assistant
+AI-powered job application manager using MCP architecture, Gemini API, and RAG pipeline.
+Technologies: Python, Next.js, LangChain, ChromaDB, MCP
+
+E-Commerce Platform
+Full-stack e-commerce site with payment integration and admin dashboard.
+Technologies: React, Node.js, PostgreSQL, Stripe
+
+Portfolio Website
+Personal portfolio with blog, built with Next.js and deployed on Vercel.
+Technologies: Next.js, Tailwind CSS, MDX
+
+EDUCATION
+BSc Computer Science | Addis Ababa University | 2016 - 2020

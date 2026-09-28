@@ -22,3 +22,7 @@ env/
 
 # Logs
 *.log
+
+# Vector store (generated locally)
+data/chroma_db/
+data/.kb_content_hash

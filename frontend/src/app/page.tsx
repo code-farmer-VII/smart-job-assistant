@@ -1,6 +1,35 @@
 import AgentChat from "@/components/AgentChat";
+import { promises as fs } from "fs";
+import path from "path";
 
-export default function Dashboard() {
+async function getStats() {
+  const dataDir = path.join(process.cwd(), "..", "data");
+  
+  let jobsCount = 0;
+  let appsCount = 0;
+  let skillsCount = 0;
+  
+  try {
+    const jobsData = await fs.readFile(path.join(dataDir, "jobs.json"), "utf8");
+    jobsCount = JSON.parse(jobsData).filter((j: any) => j.title).length; // Only count jobs with titles
+  } catch (e) {}
+  
+  try {
+    const appsData = await fs.readFile(path.join(dataDir, "applications.json"), "utf8");
+    appsCount = JSON.parse(appsData).filter((a: any) => a.job_id).length;
+  } catch (e) {}
+  
+  try {
+    const skillsData = await fs.readFile(path.join(dataDir, "skills.json"), "utf8");
+    skillsCount = JSON.parse(skillsData).filter((s: any) => s.name).length;
+  } catch (e) {}
+  
+  return { jobsCount, appsCount, skillsCount };
+}
+
+export default async function Dashboard() {
+  const stats = await getStats();
+
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
       <header>
@@ -9,9 +38,9 @@ export default function Dashboard() {
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <StatCard title="Saved Jobs" value="12" trend="+2 this week" color="from-blue-500/20 to-blue-600/5" border="border-blue-500/20" />
-        <StatCard title="Active Applications" value="5" trend="1 Interview scheduled" color="from-purple-500/20 to-purple-600/5" border="border-purple-500/20" />
-        <StatCard title="Total Skills" value="28" trend="Top 10% in React" color="from-emerald-500/20 to-emerald-600/5" border="border-emerald-500/20" />
+        <StatCard title="Saved Jobs" value={stats.jobsCount.toString()} trend="In your database" color="from-blue-500/20 to-blue-600/5" border="border-blue-500/20" />
+        <StatCard title="Active Applications" value={stats.appsCount.toString()} trend="Pending status" color="from-purple-500/20 to-purple-600/5" border="border-purple-500/20" />
+        <StatCard title="Total Skills" value={stats.skillsCount.toString()} trend="Extracted from profile" color="from-emerald-500/20 to-emerald-600/5" border="border-emerald-500/20" />
       </div>
 
       <div className="glass-panel p-8 rounded-2xl relative overflow-hidden group">

@@ -1,7 +1,227 @@
 [
   {
     "id": "skill-001",
+    "name": "Python",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-002",
+    "name": "JavaScript",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-003",
     "name": "TypeScript",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-004",
+    "name": "React",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-005",
+    "name": "Node.js",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-006",
+    "name": "AWS",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-007",
+    "name": "Docker",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-008",
+    "name": "Kubernetes",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-009",
+    "name": "SQL",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-010",
+    "name": "GraphQL",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-19475e33",
+    "name": "React",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-f5e5791d",
+    "name": "Next.js",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-dc933d5c",
+    "name": "TypeScript",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-9a876fb8",
+    "name": "Python",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-afda75aa",
+    "name": "FastAPI",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-3c5464c1",
+    "name": "Django",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-53320b69",
+    "name": "Flask",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-c5c9463c",
+    "name": "SQL",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-e6102ab1",
+    "name": "PostgreSQL",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-4f64e6f2",
+    "name": "Docker",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-19eb837f",
+    "name": "CI/CD",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-8f36c0df",
+    "name": "AI/ML integration",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-6715a755",
+    "name": "LLM APIs",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-342e3daf",
+    "name": "MCP (Model Context Protocol)",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-f9b98b63",
+    "name": "LangChain",
+    "level": "Proficient"
+  },
+  {
+    "id": "skill-e8318a33",
+    "name": "TypeScript",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-c7e90bc4",
+    "name": "Python",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-087e343f",
+    "name": "React.js",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-c872639b",
+    "name": "Next.js",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-f984d350",
+    "name": "Node.js",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-b90cffc4",
+    "name": "PostgreSQL",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-69758dba",
+    "name": "Docker",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-2998d224",
+    "name": "Git",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-f6c3777d",
+    "name": "FastAPI",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-314c3d98",
+    "name": "Tailwind CSS",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-2edc65ec",
+    "name": "TypeScript",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-8431fe5c",
+    "name": "Python",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-82c0c523",
+    "name": "React.js",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-493e2643",
+    "name": "Next.js",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-e17b5255",
+    "name": "Node.js",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-6c653f6b",
+    "name": "PostgreSQL",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-cb803932",
+    "name": "Docker",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-7dceaec7",
+    "name": "Git",
+    "level": "Advanced"
+  },
+  {
+    "id": "skill-6564a48c",
+    "name": "FastAPI",
+    "level": "Intermediate"
+  },
+  {
+    "id": "skill-fb335ab9",
+    "name": "Tailwind CSS",
     "level": "Advanced"
   }
 ]

@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 
-export default function AgentChat({ endpoint = "/api/orchestrator" }: { endpoint?: string }) {
+export default function AgentChat({ endpoint = "http://localhost:8000/api/orchestrator" }: { endpoint?: string }) {
   const [prompt, setPrompt] = useState("");
   const [messages, setMessages] = useState<{role: 'user'|'assistant', text: string}[]>([]);
   const [loading, setLoading] = useState(false);
@@ -40,14 +41,26 @@ export default function AgentChat({ endpoint = "/api/orchestrator" }: { endpoint
         {messages.length === 0 && (
           <div className="text-center text-slate-500 mt-20 flex flex-col items-center">
             <span className="text-4xl mb-4 opacity-50">✨</span>
-            <p>Try asking: "Add a new skill: Next.js (Advanced)"</p>
-            <p className="text-sm mt-2 opacity-70">or "Update my profile name to John"</p>
+            <p>Try asking: &quot;Add a new skill: Next.js (Advanced)&quot;</p>
+            <p className="text-sm mt-2 opacity-70">or &quot;Update my profile name to John&quot;</p>
           </div>
         )}
         {messages.map((msg, i) => (
           <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} animate-in fade-in slide-in-from-bottom-2 duration-300`}>
             <div className={`max-w-[80%] p-4 rounded-2xl ${msg.role === 'user' ? 'bg-indigo-600 text-white rounded-br-none shadow-[0_4px_20px_rgba(79,70,229,0.3)]' : 'glass-panel rounded-bl-none shadow-[0_4px_20px_rgba(0,0,0,0.1)]'}`}>
-              <pre className="font-sans whitespace-pre-wrap">{msg.text}</pre>
+              {msg.role === 'assistant' ? (
+                <div className="prose prose-invert prose-sm max-w-none text-slate-200
+                  prose-headings:text-slate-100 prose-headings:font-semibold
+                  prose-p:text-slate-200 prose-p:leading-relaxed
+                  prose-li:text-slate-200
+                  prose-strong:text-white
+                  prose-code:text-emerald-300 prose-code:bg-slate-800/60 prose-code:px-1 prose-code:rounded
+                  prose-hr:border-slate-600">
+                  <ReactMarkdown>{msg.text}</ReactMarkdown>
+                </div>
+              ) : (
+                <p className="font-sans whitespace-pre-wrap">{msg.text}</p>
+              )}
             </div>
           </div>
         ))}
@@ -73,7 +86,7 @@ export default function AgentChat({ endpoint = "/api/orchestrator" }: { endpoint
         <button 
           type="submit" 
           disabled={loading}
-          className="absolute right-2 top-2 bottom-2 btn-primary flex items-center justify-center min-w-[100px]"
+          className="absolute right-2 top-2 bottom-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-medium rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(99,102,241,0.3)] hover:shadow-[0_0_25px_rgba(99,102,241,0.5)] flex items-center justify-center min-w-[100px]"
         >
           {loading ? 'Thinking...' : 'Send'}
         </button>

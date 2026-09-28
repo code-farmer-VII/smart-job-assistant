@@ -1,0 +1,33 @@
+Senior Full Stack Developer
+Company: Innovatech Global
+Location: Remote (US-based)
+Type: Full-time
+
+About the Role:
+We are looking for a Senior Full Stack Developer to join our growing engineering team. You will work on our flagship SaaS platform, building new features and improving existing functionality across the entire stack.
+
+Responsibilities:
+- Design, develop, and maintain web applications using React and Next.js
+- Build and optimize backend services using Python (FastAPI or Django)
+- Write clean, maintainable, and well-tested code
+- Collaborate with product managers, designers, and other engineers
+- Participate in code reviews and mentor junior team members
+- Deploy and monitor applications using Docker and cloud services
+
+Requirements:
+- 3+ years of professional experience in full-stack development
+- Strong proficiency in TypeScript and React.js
+- Experience with Python backend frameworks (FastAPI, Django, or Flask)
+- Familiarity with SQL databases (PostgreSQL preferred)
+- Experience with Docker and CI/CD pipelines
+- Strong communication skills and ability to work in a remote team
+- Experience with Next.js is a strong plus
+
+Nice to Have:
+- Experience with AI/ML integration or LLM APIs
+- Knowledge of MCP (Model Context Protocol)
+- Experience with LangChain or similar frameworks
+- Contributions to open-source projects
+
+Salary: $120,000 - $160,000/year
+Benefits: Health insurance, 401k, unlimited PTO, home office stipend

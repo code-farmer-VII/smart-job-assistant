@@ -10,7 +10,7 @@ export default function InterviewPrep() {
 
       <div className="glass-panel p-8 rounded-2xl border-emerald-500/20 shadow-[0_0_50px_rgba(16,185,129,0.1)] relative overflow-hidden group">
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl group-hover:bg-emerald-500/20 transition-all duration-500 pointer-events-none"></div>
-        <AgentChat endpoint="/api/rag" />
+        <AgentChat endpoint="http://localhost:8000/api/rag" />
       </div>
     </div>
   );

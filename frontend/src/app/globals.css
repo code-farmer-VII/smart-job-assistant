@@ -1,7 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  --color-indigo-400: #818cf8;
+  --color-indigo-500: #6366f1;
+  --color-purple-500: #a855f7;
+  --color-purple-600: #9333ea;
+}
 :root {
   --background: 230 25% 10%; /* Dark navy/blue */
   --foreground: 210 40% 98%;
@@ -26,8 +30,4 @@ body {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-}
-
-.btn-primary {
-  @apply bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(99,102,241,0.3)] hover:shadow-[0_0_25px_rgba(99,102,241,0.5)];
 }

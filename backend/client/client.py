@@ -1,12 +1,11 @@
 import os
 import sys
 from contextlib import asynccontextmanager
-from mcp.client.stdio import stdio_client
+from mcp.client.stdio import stdio_client, StdioServerParameters
 from mcp.client.session import ClientSession
-from mcp import StdioServerParameters
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-SERVER_SCRIPT = os.path.join(BASE_DIR, "mcp", "server", "server.py")
+SERVER_SCRIPT = os.path.join(BASE_DIR, "backend", "server", "server.py")
 
 @asynccontextmanager
 async def mcp_client():

@@ -1,8 +1,8 @@
 {
   "id": "user-001",
-  "name": "",
-  "email": "",
-  "location": "",
-  "professional_title": "",
-  "summary": ""
+  "name": "Million Gonfa",
+  "email": "temesgen.gonfa@example.com",
+  "location": "Addis Ababa, Ethiopia",
+  "professional_title": "Senior Full Stack Engineer",
+  "summary": "Experienced Full Stack Engineer with a passion for building scalable web applications. Proficient in React, Python, and cloud architecture."
 }

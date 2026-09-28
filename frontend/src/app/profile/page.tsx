@@ -1,3 +1,5 @@
+import TextExtractor from "@/components/TextExtractor";
+
 export default function Profile() {
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -6,7 +8,9 @@ export default function Profile() {
         <p className="text-slate-400">Manage your skills, experience, and projects.</p>
       </header>
       
-      <div className="glass-panel p-8 rounded-2xl flex items-center justify-center min-h-[400px]">
+      <TextExtractor />
+      
+      <div className="glass-panel p-8 rounded-2xl flex items-center justify-center min-h-[300px]">
         <p className="text-slate-500">Profile data will be populated from data/profile.json</p>
       </div>
     </div>

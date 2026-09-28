@@ -1,9 +1,189 @@
 [
   {
     "id": "project-001",
-    "name": "",
-    "description": "",
-    "technologies": [],
+    "name": "Open Source Tool 1",
+    "description": "A helpful utility library that solves complex architectural problem 1.",
+    "technologies": [
+      "TypeScript",
+      "Node.js"
+    ],
+    "github_url": "https://github.com/janedoe/project-1",
+    "project_url": "https://project-1.example.com"
+  },
+  {
+    "id": "project-002",
+    "name": "Open Source Tool 2",
+    "description": "A helpful utility library that solves complex architectural problem 2.",
+    "technologies": [
+      "TypeScript",
+      "Node.js",
+      "React"
+    ],
+    "github_url": "https://github.com/janedoe/project-2",
+    "project_url": "https://project-2.example.com"
+  },
+  {
+    "id": "project-003",
+    "name": "Open Source Tool 3",
+    "description": "A helpful utility library that solves complex architectural problem 3.",
+    "technologies": [
+      "TypeScript"
+    ],
+    "github_url": "https://github.com/janedoe/project-3",
+    "project_url": "https://project-3.example.com"
+  },
+  {
+    "id": "project-004",
+    "name": "Open Source Tool 4",
+    "description": "A helpful utility library that solves complex architectural problem 4.",
+    "technologies": [
+      "TypeScript",
+      "Node.js"
+    ],
+    "github_url": "https://github.com/janedoe/project-4",
+    "project_url": "https://project-4.example.com"
+  },
+  {
+    "id": "project-005",
+    "name": "Open Source Tool 5",
+    "description": "A helpful utility library that solves complex architectural problem 5.",
+    "technologies": [
+      "TypeScript",
+      "Node.js",
+      "React"
+    ],
+    "github_url": "https://github.com/janedoe/project-5",
+    "project_url": "https://project-5.example.com"
+  },
+  {
+    "id": "project-006",
+    "name": "Open Source Tool 6",
+    "description": "A helpful utility library that solves complex architectural problem 6.",
+    "technologies": [
+      "TypeScript"
+    ],
+    "github_url": "https://github.com/janedoe/project-6",
+    "project_url": "https://project-6.example.com"
+  },
+  {
+    "id": "project-007",
+    "name": "Open Source Tool 7",
+    "description": "A helpful utility library that solves complex architectural problem 7.",
+    "technologies": [
+      "TypeScript",
+      "Node.js"
+    ],
+    "github_url": "https://github.com/janedoe/project-7",
+    "project_url": "https://project-7.example.com"
+  },
+  {
+    "id": "project-008",
+    "name": "Open Source Tool 8",
+    "description": "A helpful utility library that solves complex architectural problem 8.",
+    "technologies": [
+      "TypeScript",
+      "Node.js",
+      "React"
+    ],
+    "github_url": "https://github.com/janedoe/project-8",
+    "project_url": "https://project-8.example.com"
+  },
+  {
+    "id": "project-009",
+    "name": "Open Source Tool 9",
+    "description": "A helpful utility library that solves complex architectural problem 9.",
+    "technologies": [
+      "TypeScript"
+    ],
+    "github_url": "https://github.com/janedoe/project-9",
+    "project_url": "https://project-9.example.com"
+  },
+  {
+    "id": "project-010",
+    "name": "Open Source Tool 10",
+    "description": "A helpful utility library that solves complex architectural problem 10.",
+    "technologies": [
+      "TypeScript",
+      "Node.js"
+    ],
+    "github_url": "https://github.com/janedoe/project-10",
+    "project_url": "https://project-10.example.com"
+  },
+  {
+    "id": "project-fb299aa2",
+    "name": "Smart Job Assistant",
+    "description": "AI-powered job application manager using MCP architecture, Gemini API, and RAG pipeline.",
+    "technologies": [
+      "Python",
+      "Next.js",
+      "LangChain",
+      "ChromaDB",
+      "MCP"
+    ],
+    "github_url": "",
+    "project_url": ""
+  },
+  {
+    "id": "project-ac89a22b",
+    "name": "E-Commerce Platform",
+    "description": "Full-stack e-commerce site with payment integration and admin dashboard.",
+    "technologies": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Stripe"
+    ],
+    "github_url": "",
+    "project_url": ""
+  },
+  {
+    "id": "project-7027f81c",
+    "name": "Portfolio Website",
+    "description": "Personal portfolio with blog, built with Next.js and deployed on Vercel.",
+    "technologies": [
+      "Next.js",
+      "Tailwind CSS",
+      "MDX"
+    ],
+    "github_url": "",
+    "project_url": ""
+  },
+  {
+    "id": "project-171e606d",
+    "name": "Smart Job Assistant",
+    "description": "AI-powered job application manager using MCP architecture, Gemini API, and RAG pipeline.",
+    "technologies": [
+      "Python",
+      "Next.js",
+      "LangChain",
+      "ChromaDB",
+      "MCP"
+    ],
+    "github_url": "",
+    "project_url": ""
+  },
+  {
+    "id": "project-dbfed532",
+    "name": "E-Commerce Platform",
+    "description": "Full-stack e-commerce site with payment integration and admin dashboard.",
+    "technologies": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Stripe"
+    ],
+    "github_url": "",
+    "project_url": ""
+  },
+  {
+    "id": "project-1d286709",
+    "name": "Portfolio Website",
+    "description": "Personal portfolio with blog, built with Next.js and deployed on Vercel.",
+    "technologies": [
+      "Next.js",
+      "Tailwind CSS",
+      "MDX"
+    ],
     "github_url": "",
     "project_url": ""
   }

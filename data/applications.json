@@ -2,7 +2,61 @@
   {
     "id": "application-001",
     "job_id": "job-001",
+    "status": "INTERVIEWING",
+    "updated_at": "2026-09-15T12:00:00Z"
+  },
+  {
+    "id": "application-002",
+    "job_id": "job-002",
+    "status": "REJECTED",
+    "updated_at": "2026-09-15T12:00:00Z"
+  },
+  {
+    "id": "application-003",
+    "job_id": "job-003",
+    "status": "OFFER",
+    "updated_at": "2026-09-15T12:00:00Z"
+  },
+  {
+    "id": "application-004",
+    "job_id": "job-004",
     "status": "SAVED",
-    "updated_at": ""
+    "updated_at": "2026-09-15T12:00:00Z"
+  },
+  {
+    "id": "application-005",
+    "job_id": "job-005",
+    "status": "APPLIED",
+    "updated_at": "2026-09-15T12:00:00Z"
+  },
+  {
+    "id": "application-006",
+    "job_id": "job-006",
+    "status": "INTERVIEWING",
+    "updated_at": "2026-09-15T12:00:00Z"
+  },
+  {
+    "id": "application-007",
+    "job_id": "job-007",
+    "status": "REJECTED",
+    "updated_at": "2026-09-15T12:00:00Z"
+  },
+  {
+    "id": "application-008",
+    "job_id": "job-008",
+    "status": "OFFER",
+    "updated_at": "2026-09-15T12:00:00Z"
+  },
+  {
+    "id": "application-009",
+    "job_id": "job-009",
+    "status": "SAVED",
+    "updated_at": "2026-09-15T12:00:00Z"
+  },
+  {
+    "id": "application-010",
+    "job_id": "job-010",
+    "status": "APPLIED",
+    "updated_at": "2026-09-15T12:00:00Z"
   }
 ]
